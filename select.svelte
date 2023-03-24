@@ -45,7 +45,7 @@
 	<summary>
 		{#if multiSelect}
 			{#each getSelected() as val}
-				<input type="hidden" name={`${name}`} value={val.value} />
+				<input type="hidden" name={`${name}[]`} value={val.value} />
 				<span class="badge"
 					>{val.label} &nbsp;
 					<span on:click|stopPropagation={() => doHandleRemove(val)}>x</span></span
